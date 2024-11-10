@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Query System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar for Controls -->
+        <div class="sidebar">
+            <h2>Geospatial Query System</h2>
+            
+            <!-- Nearest Neighbor Search -->
+            <div class="control-group">
+                <h3>Nearest Neighbor</h3>
+                <label for="nearest-point">Enter Location:</label>
+                <input type="text" id="nearest-point" placeholder="Latitude, Longitude">
+                <button onclick="findNearestNeighbor()">Search</button>
+            </div>
+
+            <!-- Range Query -->
+            <div class="control-group">
+                <h3>Range Query</h3>
+                <label for="range-point">Center Location:</label>
+                <input type="text" id="range-point" placeholder="Latitude, Longitude">
+                <label for="range-radius">Radius (km):</label>
+                <input type="number" id="range-radius" min="0" placeholder="Enter radius">
+                <button onclick="executeRangeQuery()">Find in Range</button>
+            </div>
+
+            <!-- Intersection Detection -->
+            <div class="control-group">
+                <h3>Intersection Detection</h3>
+                <label for="intersection-point">Enter Area Points:</label>
+                <textarea id="intersection-point" rows="4" placeholder="Lat1,Lng1; Lat2,Lng2; ..."></textarea>
+                <button onclick="detectIntersection()">Detect Intersections</button>
+            </div>
+        </div>
+
+        <!-- Main Map Area -->
+        <div class="map-container" id="map"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
