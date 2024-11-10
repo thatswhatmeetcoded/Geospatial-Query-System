@@ -100,7 +100,7 @@ sudo make install
 
 ```bash
 # Clone the repository
-git clone [repository-url]
+git clone https://github.com/thatswhatmeetcoded/Geospatial-Query-System.git
 
 # Navigate to project directory
 cd geospatial-query-system
