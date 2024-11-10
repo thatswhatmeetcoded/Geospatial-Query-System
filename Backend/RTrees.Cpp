@@ -481,8 +481,9 @@ private:
         }
     }
 };
+    /*
 
-int main(){
+int mmmain(){
     RTree tree;
 
     // Insert some sample points
@@ -553,4 +554,4 @@ int main(){
          << nearest.x << "," << nearest.y << ")\n";
 
     return 0;
-}
+}*/
